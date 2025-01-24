@@ -9,7 +9,7 @@
       enabled: true
       state: started
   - name: include from common role
-    incldue-role:
+    include-role:
       name: common
       tasks_from: main  #load from main.yml. you cna different name as well.
 
