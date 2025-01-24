@@ -8,15 +8,14 @@
       name: nginx
       enabled: true
       state: started
-  - name: include from common role
-    include-role:
-      name: common
-      tasks_from: main  #load from main.yml. you cna different name as well.
+ 
 
-- name: include from comman roles
+ - name: include from comman roles
   include_role:
     name: common
     tasks_from: main
+
+
   # - name: Delete content & directory
   #   ansible.builtin.file:
   #     state: absent
