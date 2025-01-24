@@ -8,11 +8,10 @@
       name: nginx
       enabled: true
       state: started
-
- - name: include from comman role
-  include_role:
-    name: common
-    tasks_from: main
+  - name: incldue from common role.
+    include_role:
+      name: common
+      tasks_from: main
 
 
   # - name: Delete content & directory
