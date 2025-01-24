@@ -8,9 +8,8 @@
       name: nginx
       enabled: true
       state: started
- 
 
- - name: include from comman roles
+ - name: include from comman role
   include_role:
     name: common
     tasks_from: main
