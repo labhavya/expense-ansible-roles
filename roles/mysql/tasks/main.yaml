@@ -3,23 +3,23 @@
       name: PyMySQL
       executable: pip3.9
       
-  - name: install mysql server
-    ansible.builtin.dnf:
+   - name: install mysql server
+     ansible.builtin.dnf:
       name: mysql-server
       state: installed
   
-  - name: enable and start mysql service.
-    ansible.builtin.service:
+   - name: enable and start mysql service.
+     ansible.builtin.service:
       name: mysqld
       state: started
       enabled: yes
-  - name: connect to mysql to validate if root password is set
-    community.mysql.mysql_info:
+   - name: connect to mysql to validate if root password is set
+     community.mysql.mysql_info:
       login_user: root
       login_password: "{{ mysql_root_passowrd }}"
       login_host: mysql.devdom.fun
-    register: mysql_info
-    ignore_errors: true #continue with the program execution if there are any error. DEfault behaviour here is to terminate.
+     register: mysql_info
+     ignore_errors: true #continue with the program execution if there are any error. DEfault behaviour here is to terminate.
 
   - name: print the output
     ansible.builtin.debug:
