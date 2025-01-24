@@ -1,3 +1,5 @@
 mysql_host: mysql.devdom.fun
 mysql_user: root
 mysql_password: ExpenseApp@1
+APP_LOCATION: /app
+component: backend
