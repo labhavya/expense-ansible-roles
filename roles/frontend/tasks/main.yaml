@@ -32,7 +32,7 @@
   
   - name: copy the config file
     ansible.builtin.template:
-      src: expense.conf
+      src: expense.conf.j2
       dest: /etc/nginx/default.d/expense.conf
     notify:
     - Restart Nginx
