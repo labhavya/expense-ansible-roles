@@ -4,7 +4,7 @@
     state: absent
 
 - name: create  dir
-  ansible.builtin.files:
+  ansible.builtin.file:
     path: "{{ APP_LOCATION }}" #backend /app, frontend : /usr/share/nginx/html
     state: directory
 
