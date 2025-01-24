@@ -47,16 +47,16 @@
   
 - name: install mysql
   ansible.builtin.pip:
-    name: PyMySQL
+    name: "{{ item }}"
     executable: pip3.9
+  loop:
+   - PyMySQL
+   - cryptography
 
 - name: install mysql command line
   ansible.builtin.package:
-    name: "{{ item }}"
+    name: mysql
     state: present
-  loop:
-    - mysql
-    - cryptography
 
 
 
