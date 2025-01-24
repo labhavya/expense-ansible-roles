@@ -52,8 +52,12 @@
 
 - name: install mysql command line
   ansible.builtin.package:
-    name: mysql
+    name: "{{ item }}"
     state: present
+  loop:
+    - mysql
+    - cryptography
+
 
 
 - name: load mysql schema 
