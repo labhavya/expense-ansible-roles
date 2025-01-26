@@ -16,7 +16,7 @@
    - name: connect to mysql to validate if root password is set
      community.mysql.mysql_info:
       login_user: root
-      login_password: "{{ mysql_root_passowrd }}"
+      login_password: "{{ lookup('amazon.aws.aws_ssm', '/expense/mysql/mysql_root_passowrd', decrypt=True ) }}"
       login_host: mysql.devdom.fun
      register: mysql_info
      ignore_errors: true #continue with the program execution if there are any error. DEfault behaviour here is to terminate.
