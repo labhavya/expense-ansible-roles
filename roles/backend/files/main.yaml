@@ -3,7 +3,7 @@ Description = Backend Service
 
 [Service]
 User=expense
-Environment=DB_HOST="mysql.devdom.fun"
+Environment=DB_HOST="expense-dev-mysql.devdom.fun"
 ExecStart=/bin/node /app/index.js
 SyslogIdentifier=backend
 

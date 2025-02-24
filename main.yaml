@@ -1,0 +1,7 @@
+- name: "invoke code for {{ component }}"
+  hosts: all
+  become: yes
+  vars_file:
+  - "variables-{{ envrionment }}.yaml"
+  roles:
+  - "{{ component }}"
