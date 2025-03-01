@@ -1,3 +1,3 @@
-backend_host: backend.devdom.fun
+backend_host: backend.app-dev.devdom.fun
 APP_LOCATION: /usr/share/nginx/html
 component: frontend

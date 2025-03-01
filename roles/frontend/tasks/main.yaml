@@ -14,26 +14,6 @@
       tasks_from: main
 
 
-  # - name: Delete content & directory
-  #   ansible.builtin.file:
-  #     state: absent
-  #     path: /usr/share/nginx/html/
-  
-  # - name: Create a directory if it does not exist
-  #   ansible.builtin.file:
-  #     path: /usr/share/nginx/html
-  #     state: directory
-
-  # - name: Download the frontend content
-  #   ansible.builtin.get_url:
-  #     url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
-  #     dest: /tmp/frontend.zip
-
-  # - name: unzip the content
-  #   ansible.builtin.unarchive:
-  #     src: /tmp/frontend.zip
-  #     dest: /usr/share/nginx/html/
-  #     remote_src: yes
   
   - name: copy the config file
     ansible.builtin.template:
